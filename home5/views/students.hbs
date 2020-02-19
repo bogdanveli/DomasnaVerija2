@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/students" method="post">
+        <input type="text" name="first_name" placeholder="first name" required="required"/>
+        <input type="number" name="index" placeholder="index" required="required"/>
+        <input type="text" name="smer" placeholder="smer" required="required"/>
+        <input type="number" name="krediti" placeholder="krediti" required="required"/>
+        <button type="submit">+</button>
+    </form>
+    <br/><hr/><br/>
+    <table border="1" width="80%">
+        <tr>
+            <th>Ime</th>
+            <th>index</th>
+            <th>smer</th>
+            <th>krediti</th>
+        </tr>
+        {{#each students}}
+        <tr id="id_{{this.id}}">
+            <td>{{this.ime}}</td>
+            <td>{{this.index}}</td>
+            <td>{{this.smer}}</td>
+            <td>{{this.krediti}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>

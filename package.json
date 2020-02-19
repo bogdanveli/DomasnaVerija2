@@ -1,7 +1,6 @@
 {
   "name": "bogdan-verzija",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdanveli/DomasnaVerija2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bogdanveli/DomasnaVerija2/issues"
+  },
+  "homepage": "https://github.com/bogdanveli/DomasnaVerija2#readme",
+  "description": ""
 }
