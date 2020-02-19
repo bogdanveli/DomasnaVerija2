@@ -87,4 +87,31 @@ fs.readFile("lorem.txt", 'utf8', function(err, data) {
     Egual7();
     MostUsedWord();
 });
+const express = require('express');
+const bodyParser = require('body-parser');
+var app = express(); 
+app.use(bodyParser.urlencoded({ extended: false })); 
+
+
+app.get('/names.txt', function (req, res) 
+{
+    var names = './names.txt';
+    fs.readFile(names, function (err, data)
+     {
+        
+        var fileData = JSON.stringify(data);
+        res.send(fileData);
+    })
+});
+
+
+app.post('/names/', function (req, res) {
+
+    fs.appendFile('./names.txt', `${req.body.name}`, function (err, data) {
+        res.send(req.body.name);
+    })
+});
+app.listen(8080);
+
+
 
